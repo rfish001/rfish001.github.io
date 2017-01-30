@@ -1,0 +1,714 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="blog," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="一、准备工作1. github博客搭建在github的github pages上，所以需要注册一个github账号，根据官方说明同时建一个与账户名同名的仓库。
+
+注意：
+
+仓库名称要和github上的用户昵称相同如果我的是昵称是rfish001那么仓库名称就必须rfish001.github.io
+最好使用ssh模式clone到本地。方便平时生成博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="github pages博客搭建">
+<meta property="og:url" content="http://yoursite.com/2016/06/11/github-pages博客搭建/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、准备工作1. github博客搭建在github的github pages上，所以需要注册一个github账号，根据官方说明同时建一个与账户名同名的仓库。
+
+注意：
+
+仓库名称要和github上的用户昵称相同如果我的是昵称是rfish001那么仓库名称就必须rfish001.github.io
+最好使用ssh模式clone到本地。方便平时生成博客">
+<meta property="og:image" content="http://7xk1hi.com1.z0.glb.clouddn.com/Hexo.png">
+<meta property="og:updated_time" content="2016-06-22T12:22:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="github pages博客搭建">
+<meta name="twitter:description" content="一、准备工作1. github博客搭建在github的github pages上，所以需要注册一个github账号，根据官方说明同时建一个与账户名同名的仓库。
+
+注意：
+
+仓库名称要和github上的用户昵称相同如果我的是昵称是rfish001那么仓库名称就必须rfish001.github.io
+最好使用ssh模式clone到本地。方便平时生成博客">
+<meta name="twitter:image" content="http://7xk1hi.com1.z0.glb.clouddn.com/Hexo.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/11/github-pages博客搭建/"/>
+
+
+
+
+
+  <title> github pages博客搭建 | Hexo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Hexo</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/06/11/github-pages博客搭建/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="John Doe">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Hexo" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                github pages博客搭建
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-11T11:11:28+08:00">
+                2016-06-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="http://7xk1hi.com1.z0.glb.clouddn.com/Hexo.png" rel="gallery_ciyjc6kv1000030u7i6a0ajj9"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="http://7xk1hi.com1.z0.glb.clouddn.com/Hexo.png" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        <h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><h3 id="1-github"><a href="#1-github" class="headerlink" title="1. github"></a>1. github</h3><p>博客搭建在github的github pages上，所以需要注册一个<a href="https://github.com/" target="_blank" rel="external">github</a>账号，根据<a href="https://pages.github.com/" target="_blank" rel="external">官方说明</a>同时建一个与账户名同名的仓库。</p>
+<blockquote>
+<p><code>注意</code>：</p>
+<ol>
+<li>仓库名称要和github上的用户昵称相同<br>如果我的是昵称是<code>rfish001</code>那么仓库名称就必须<code>rfish001.github.io</code></li>
+<li>最好使用ssh模式clone到本地。<br>方便平时生成博客</li>
+</ol>
+</blockquote>
+<a id="more"></a>
+<h3 id="2-git"><a href="#2-git" class="headerlink" title="2. git"></a>2. git</h3><p>下载最新的git版本管理软件，并安装。用于推送本地生成的静态博客到github上。</p>
+<h3 id="3-node-js"><a href="#3-node-js" class="headerlink" title="3. node.js"></a>3. node.js</h3><p>HEXO静态生成博客需要用到node.js，所以需要安装该程序。安装完该程序后就可以使用npm命令了。</p>
+<blockquote>
+<p>安装完该程序后由于软件源的原因，需要翻墙或者换成淘宝源。<br>替换为淘宝源：打开cmd输入如下命令<code>$ npm install -g cnpm --registry=https://registry.npm.taobao.org</code>之后使用cnpm命令代替npm命令</p>
+</blockquote>
+<h2 id="二、安装HEXO"><a href="#二、安装HEXO" class="headerlink" title="二、安装HEXO"></a>二、安装HEXO</h2><h3 id="1-安装HEXO"><a href="#1-安装HEXO" class="headerlink" title="1. 安装HEXO"></a>1. 安装HEXO</h3><p>在git中cd到任意文件夹，使用<code>cnpm install -g hexo-cli</code>安装HEXO。</p>
+<blockquote>
+<p><code>注意</code>：<br>该目录并不是用来存推送到github上的文件，而是用来生成需要推送上去的文件，而这个生成的文件是通过后面安装的hexo git 插件来完成的。</p>
+</blockquote>
+<p>继续输入<code>cnpm install hexo --save</code>完成安装，验证HEXO安装是否成功输入<code>hexo -v</code>（查看HEXO版本）来间接验证。</p>
+<blockquote>
+<p><code>注意</code>：<br>以上命令均在git Bash中输入。CMD中应该也是可以的，但是没有git中的那么顺手，git中的命令很多延续了linux bash中的命令。</p>
+</blockquote>
+<h3 id="2-初始化hexo"><a href="#2-初始化hexo" class="headerlink" title="2. 初始化hexo"></a>2. 初始化hexo</h3><p><code>hexo init</code></p>
+<h3 id="3-安装生成器"><a href="#3-安装生成器" class="headerlink" title="3. 安装生成器"></a>3. 安装生成器</h3><p><code>cnpm install</code></p>
+<h3 id="4-运行HEXO"><a href="#4-运行HEXO" class="headerlink" title="4. 运行HEXO"></a>4. 运行HEXO</h3><p><code>hexo s -g</code>（s代表server ，表示启动服务，g表示generate生成博客），然后在浏览器中输入<code>localhost:4000</code>就可以看到博客界面了。但是现在还在本地的，我们需要推送到github pages上面去。</p>
+<h2 id="三、安装HEXO插件"><a href="#三、安装HEXO插件" class="headerlink" title="三、安装HEXO插件"></a>三、安装HEXO插件</h2><h3 id="1-安装hexo-git插件"><a href="#1-安装hexo-git插件" class="headerlink" title="1. 安装hexo git插件"></a>1. 安装hexo git插件</h3><p>因为推送到github上的文件并不是目前目录下的文件。需用到该插件。输入<code>cnpm install hexo-deployer-git --save</code>将完成插件的安装。</p>
+<h3 id="2-配置hexo-git插件需要的信息"><a href="#2-配置hexo-git插件需要的信息" class="headerlink" title="2. 配置hexo git插件需要的信息"></a>2. 配置hexo git插件需要的信息</h3><p>由于是推送到github上需要认证信息，以及库链接等信息。在HEXO安装目录下找到<code>/_config.yml</code>文件，用文本编辑工具打开，拉到最下面。改为如下<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> git</div><div class="line"><span class="attr">  repo:</span> git@github.com:xxxx/xxxx.github.io.git <span class="comment">#新建仓库的地址</span></div><div class="line"><span class="attr">  branch:</span> master</div></pre></td></tr></table></figure></p>
+<h2 id="四、发布博客"><a href="#四、发布博客" class="headerlink" title="四、发布博客"></a>四、发布博客</h2><h3 id="1-设置git身份信息"><a href="#1-设置git身份信息" class="headerlink" title="1. 设置git身份信息"></a>1. 设置git身份信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name <span class="string">"你的用户名"</span></div><div class="line">git config --global user.name <span class="string">"你的邮箱"</span></div></pre></td></tr></table></figure>
+<h3 id="2-发布博客"><a href="#2-发布博客" class="headerlink" title="2. 发布博客"></a>2. 发布博客</h3><p><code>hexo d -g</code>（d表示deploy发布博客，g表示generate生成博客），然后就可以访问yourname.github.io查看效果了。</p>
+<h2 id="五、域名绑定"><a href="#五、域名绑定" class="headerlink" title="五、域名绑定"></a>五、域名绑定</h2><h3 id="1-生成CNAME文件"><a href="#1-生成CNAME文件" class="headerlink" title="1. 生成CNAME文件"></a>1. 生成CNAME文件</h3><p>根据github pages<a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/" target="_blank" rel="external">官方说明</a>，需要在库的根目录下创建<code>CNAME</code>文件。但是如果直接在git网页上创建，下次生成发布博客的时候会被清理掉，但是我们可以在本地创建在<code>/source</code>下，在生成静态文件提交的时候，会被自动复制到根目录下。</p>
+<blockquote>
+<p><code>提示</code>：<br>只需要在域名里绑定解析A记录就可以了，比如我的是<a href="http://yangsy.xyz" target="_blank" rel="external">yangsy.xyz</a>。以后用这个访问就可以了，www可以不弄。</p>
+</blockquote>
+<h2 id="六、HEXO其他配置"><a href="#六、HEXO其他配置" class="headerlink" title="六、HEXO其他配置"></a>六、HEXO其他配置</h2><h3 id="1-next主题"><a href="#1-next主题" class="headerlink" title="1. next主题"></a>1. next主题</h3><ol>
+<li>从Next的Gihub仓库中获取最新版本<br>在HEXO的目录下执行该命令<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code>将hexo主题clone到<code>themes/next</code>下。</li>
+<li>启用<br>需要修改/_config.yml配置项theme：<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Extensions</span></div><div class="line"><span class="comment">## Plugins: http://hexo.io/plugins/</span></div><div class="line"><span class="comment">## Themes: http://hexo.io/themes/</span></div><div class="line"><span class="attr">theme:</span> next</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div></pre></td><td class="code"><pre><div class="line">3. 美化</div><div class="line">   在`/hexo/themes/light_config.yml`有配置项，看注释更改就可以了。</div><div class="line"></div><div class="line">### 2. _config.yml配置文件</div><div class="line">​```YAML</div><div class="line"># Hexo Configuration</div><div class="line">## Docs: http://zespia.tw/hexo/docs/configure.html</div><div class="line">## Source: https://github.com/tommy351/hexo/</div><div class="line"></div><div class="line"># Site 这里的配置，哪项配置反映在哪里，可以参考我的博客</div><div class="line">title: Zippera&apos;s blog #站点名，站点左上角</div><div class="line">subtitle: Walk steps step by step #副标题，站点左上角</div><div class="line">description: Walk steps step by step #给搜索引擎看的，对站点的描述，可以自定义</div><div class="line">author: zippera #在站点左下角可以看到</div><div class="line">email: #你的联系邮箱</div><div class="line">language: zh-Hans #中国人嘛，用中文</div><div class="line"></div><div class="line"># URL #这项暂不配置，绑定域名后，欲创建sitemap.xml需要配置该项</div><div class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</div><div class="line">url: http://zipperary.com</div><div class="line">root: /</div><div class="line">permalink: :year/:month/:day/:title/</div><div class="line">tag_dir: tags</div><div class="line">archive_dir: archives</div><div class="line">category_dir: categories</div><div class="line"></div><div class="line"># Writing 文章布局、写作格式的定义，不修改</div><div class="line">new_post_name: :title.md # File name of new posts</div><div class="line">default_layout: post</div><div class="line">auto_spacing: false # Add spaces between asian characters and western characters</div><div class="line">titlecase: false # Transform title into titlecase</div><div class="line">max_open_file: 100</div><div class="line">filename_case: 0</div><div class="line">highlight:</div><div class="line">  enable: true</div><div class="line">  backtick_code_block: true</div><div class="line">  line_number: true</div><div class="line">  tab_replace:</div><div class="line"></div><div class="line"># Category &amp; Tag</div><div class="line">default_category: uncategorized</div><div class="line">category_map:</div><div class="line">tag_map:</div><div class="line"></div><div class="line"># Archives 默认值为2，这里都修改为1，相应页面就只会列出标题，而非全文</div><div class="line">## 2: Enable pagination</div><div class="line">## 1: Disable pagination</div><div class="line">## 0: Fully Disable</div><div class="line">archive: 1</div><div class="line">category: 1</div><div class="line">tag: 1</div><div class="line"></div><div class="line"># Server 不修改</div><div class="line">## Hexo uses Connect as a server</div><div class="line">## You can customize the logger format as defined in</div><div class="line">## http://www.senchalabs.org/connect/logger.html</div><div class="line">port: 4000</div><div class="line">logger: false</div><div class="line">logger_format:</div><div class="line"></div><div class="line"># Date / Time format 日期格式，不修改</div><div class="line">## Hexo uses Moment.js to parse and display date</div><div class="line">## You can customize the date format as defined in</div><div class="line">## http://momentjs.com/docs/#/displaying/format/</div><div class="line">date_format: MMM D YYYY</div><div class="line">time_format: H:mm:ss</div><div class="line"></div><div class="line"># Pagination 每页显示文章数，可以自定义，我将10改成了5</div><div class="line">## Set per_page to 0 to disable pagination</div><div class="line">per_page: 5</div><div class="line">pagination_dir: page</div><div class="line"></div><div class="line"># Disqus Disqus插件，我们会替换成“多说”，不修改</div><div class="line">disqus_shortname:</div><div class="line"></div><div class="line"># Extensions 这里配置站点所用主题和插件，暂默认，后面会介绍怎么修改</div><div class="line">## Plugins: https://github.com/tommy351/hexo/wiki/Plugins</div><div class="line">## Themes: https://github.com/tommy351/hexo/wiki/Themes</div><div class="line">theme: light</div><div class="line">exclude_generator:</div><div class="line">plugins:</div><div class="line">- hexo-generator-feed</div><div class="line">- hexo-generator-sitemap</div><div class="line"></div><div class="line"># Deployment 站点部署到github要配置，上一节中已经讲过</div><div class="line">## Docs: http://zespia.tw/hexo/docs/deploy.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:xxxx/xxxx.github.io.git #新建仓库的地址</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<h2 id="七、写作格式"><a href="#七、写作格式" class="headerlink" title="七、写作格式"></a>七、写作格式</h2><h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1. 标题"></a>1. 标题</h3><p>在使用<code>#</code>作为分级时，需要在<code>#</code>后面加空格再写标题(即为<code>## 二级标题</code>而不是<code>##二级标题</code>)，生成博客的时候才能识别出来。不需要在写作时添加<code>[toc]</code>,next主题配置文件中可以如下配置。<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Table Of Contents in the Sidebar 生成目录</span></div><div class="line"><span class="attr">toc:</span></div><div class="line"><span class="attr">  enable:</span> <span class="literal">true</span></div><div class="line"></div><div class="line">  <span class="comment"># Automatically add list number to toc.目录自动标号</span></div><div class="line"><span class="attr">  number:</span> <span class="literal">false</span></div></pre></td></tr></table></figure></p>
+<h3 id="2-图片"><a href="#2-图片" class="headerlink" title="2.图片"></a>2.图片</h3><p>图片使用16：9的长宽比最好。</p>
+<h3 id="3-视频"><a href="#3-视频" class="headerlink" title="3.视频"></a>3.视频</h3><p>使用如下代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">embed</span> <span class="attr">type</span>=<span class="string">"video/mp4"</span> <span class="attr">allowscriptaccess</span>=<span class="string">"always"</span> <span class="attr">allowfullscreen</span>=<span class="string">"true"</span> <span class="attr">wmode</span>=<span class="string">"transparent"</span> <span class="attr">quality</span>=<span class="string">"high"</span> <span class="attr">height</span>=<span class="string">"300"</span> <span class="attr">width</span>=<span class="string">"480"</span> <span class="attr">src</span>=<span class="string">"http://7xthzp.com2.z0.glb.clouddn.com/IMG_5033.mp4"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="八、友情链接"><a href="#八、友情链接" class="headerlink" title="八、友情链接"></a>八、友情链接</h2><h3 id="1-方法一"><a href="#1-方法一" class="headerlink" title="1. 方法一"></a>1. 方法一</h3><p>修改footer原来的文字为友情链接。优点简单快捷美观，缺点只能放两个友情链接。<br>修改<code>\themes\next\layout\_partials\footer.swig</code>文件里的<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;div class="powered-by"&gt;</div><div class="line">  &#123;&#123; __('footer.powered', '&lt;a class="theme-link" href="http://hexo.io"&gt;Hexo&lt;/a&gt;') &#125;&#125;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;div class="theme-info"&gt;</div><div class="line">  &#123;&#123; __('footer.theme') &#125;&#125; -</div><div class="line">  &lt;a class="theme-link" href="https://github.com/iissnan/hexo-theme-next"&gt;</div><div class="line">    NexT.&#123;&#123; theme.scheme &#125;&#125;</div><div class="line">  &lt;/a&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>其中上面的<code>&lt;a class=&quot;theme-link&quot; href=&quot;http://hexo.io&quot;&gt;Hexo&lt;/a&gt;</code>可以将链接修改为你想要友情链接的链接，比如<code>&lt;a class=&quot;theme-link&quot; href=&quot;http://canxiuzhang.github.io&quot;&gt;Zcx&lt;/a&gt;</code>这样链接就做好了。<br>下一步修改文字，找到语言文件<code>\themes\next\languages\zh-Hans.yml</code>我使用的是这个文件，所以我修改的这个文件对应的内容。<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">footer:</span></div><div class="line"><span class="comment">#  powered: "由 %s 强力驱动"</span></div><div class="line"><span class="attr">  powered:</span> <span class="string">"友情链接 %s "</span></div><div class="line"><span class="attr">  theme:</span> 主题</div></pre></td></tr></table></figure></p>
+<p>可以看到，将原来的<code>powered: &quot;由 %s 强力驱动&quot;</code>修改为了<code>powered: &quot;友情链接 %s &quot;</code><br>最后重新发布一下博客就完成了。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/blog/" rel="tag"># blog</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/14/毕业离校/" rel="prev" title="毕业离校">
+                毕业离校 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="John Doe" />
+          <p class="site-author-name" itemprop="name">John Doe</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、准备工作"><span class="nav-number">1.</span> <span class="nav-text">一、准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-github"><span class="nav-number">1.1.</span> <span class="nav-text">1. github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-git"><span class="nav-number">1.2.</span> <span class="nav-text">2. git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-node-js"><span class="nav-number">1.3.</span> <span class="nav-text">3. node.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、安装HEXO"><span class="nav-number">2.</span> <span class="nav-text">二、安装HEXO</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装HEXO"><span class="nav-number">2.1.</span> <span class="nav-text">1. 安装HEXO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-初始化hexo"><span class="nav-number">2.2.</span> <span class="nav-text">2. 初始化hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-安装生成器"><span class="nav-number">2.3.</span> <span class="nav-text">3. 安装生成器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-运行HEXO"><span class="nav-number">2.4.</span> <span class="nav-text">4. 运行HEXO</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、安装HEXO插件"><span class="nav-number">3.</span> <span class="nav-text">三、安装HEXO插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装hexo-git插件"><span class="nav-number">3.1.</span> <span class="nav-text">1. 安装hexo git插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-配置hexo-git插件需要的信息"><span class="nav-number">3.2.</span> <span class="nav-text">2. 配置hexo git插件需要的信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、发布博客"><span class="nav-number">4.</span> <span class="nav-text">四、发布博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-设置git身份信息"><span class="nav-number">4.1.</span> <span class="nav-text">1. 设置git身份信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-发布博客"><span class="nav-number">4.2.</span> <span class="nav-text">2. 发布博客</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、域名绑定"><span class="nav-number">5.</span> <span class="nav-text">五、域名绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-生成CNAME文件"><span class="nav-number">5.1.</span> <span class="nav-text">1. 生成CNAME文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、HEXO其他配置"><span class="nav-number">6.</span> <span class="nav-text">六、HEXO其他配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-next主题"><span class="nav-number">6.1.</span> <span class="nav-text">1. next主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、写作格式"><span class="nav-number">7.</span> <span class="nav-text">七、写作格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-标题"><span class="nav-number">7.1.</span> <span class="nav-text">1. 标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-图片"><span class="nav-number">7.2.</span> <span class="nav-text">2.图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-视频"><span class="nav-number">7.3.</span> <span class="nav-text">3.视频</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、友情链接"><span class="nav-number">8.</span> <span class="nav-text">八、友情链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-方法一"><span class="nav-number">8.1.</span> <span class="nav-text">1. 方法一</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+      <!-- UY END -->
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
